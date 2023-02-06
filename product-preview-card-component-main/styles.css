@@ -1,106 +1,148 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@400;700&display=swap');
+
+:root {
+  --cream: hsl(30, 38%, 92%);
+  --dark-cyan: hsl(158, 36%, 37%);
+  --darker-cyan: hsl(159, 36%, 26%);
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+  --monserrat: 'Montserrat', sans-serif;
+  --fraunces: 'Fraunces', serif;
+}
+
+* {
   margin: 0;
   padding: 0;
-  background-color: hsl(30, 38%, 92%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+}
+
+body {
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll;
+  box-sizing: border-box;
+  background-color: var(--cream);
   font-size: 14px;
-  color: hsl(212, 21%, 14%);
+}
+b ody::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
 }
 
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-.attribution a {
-  color: hsl(228, 45%, 44%);
+/* image {
+  display: block;
+} */
+
+main {
+  background-color: var(--white);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 90%;
+  width: 37.5rem;
+  margin: 0 auto;
+  margin-top: 11rem;
+  margin-bottom: 10%;
+  border-radius: 15px;
 }
 
-.container {
-  background-color: white;
-  height: 50%;
-  width: 30%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
-  margin: 5px;
-}
-
-.parfume {
+.image-container {
   background-image: url('./images/image-product-desktop.jpg');
-  background-size: cover;
   background-position: center;
+  background-size: cover;
+  width: 100%;
+  border-radius: 15px 0 0 15px;
   background-repeat: no-repeat;
-  height: 100%;
-  width: 100%;
 }
 
-.content {
-  height: 90%;
-  width: 100%;
-  padding: 20px;
+.info-section {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 1.4rem;
 }
 
-.sub-title {
-  letter-spacing: 0.1rem;
+h1 {
+  font-family: var(--monserrat);
+  font-weight: lighter;
   text-transform: uppercase;
-  font-weight: 500;
+  letter-spacing: 6px;
+  font-size: 0.7rem;
+  color: var(--dark-grayish-blue);
 }
 
-.title {
-  font-size: 30px;
+h2 {
+  font-family: var(--fraunces);
+  font-size: 1.9rem;
+  line-height: 2rem;
   font-weight: 700;
-  margin: 10px 0;
 }
 
-.desc {
-  font-weight: 500;
-  line-height: 1.25rem;
+.info-section p {
+  font-family: var(--monserrat);
+  font-weight: lighter;
+  font-size: 0.9rem;
+  color: var(--dark-grayish-blue);
+  line-height: 1.4rem;
 }
 
-.new-price {
+.pricing {
+  display: flex;
+  flex-direction: column;
+  gap: 2.1rem;
+}
+
+.pricing p {
+  color: var(--dark-cyan);
+  font-family: var(--fraunces);
   font-size: 2rem;
-  font-weight: bold;
-  color: hsl(158, 36%, 37%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.6rem;
+  margin-top: 1rem;
 }
 
-.old-price {
-  padding-left: 5px;
+.pricing p span {
+  font-family: var(--monserrat);
+  font-weight: lighter;
+  color: var(--dark-grayish-blue);
   text-decoration: line-through;
+  font-size: 0.8rem;
 }
 
 button {
-  display: block;
-  margin: 0 auto;
-  background-color: hsl(158, 36%, 37%);
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  font-size: 1rem;
-  font-weight: 700;
   cursor: pointer;
+  border: 1px solid var(--dark-cyan);
+  background-color: var(--dark-cyan);
+  color: var(--white);
+  font-family: var(--monserrat);
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 0.9rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all ease-in-out 0.2s;
 }
 
-@media (width <= 375px) {
-  .container {
-    flex-direction: column;
-    width: 300px;
-    height: 500px;
+@media (hover: hover) {
+  button:hover {
+    transition: all ease-in-out 0.2s;
+    background-color: var(--darker-cyan);
   }
-  .parfume {
-    height: 200px;
-    width: 300px;
+}
+
+@media screen and (max-width: 650px) {
+  main {
+    margin-top: 10%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 15rem 1fr;
+    height: 100%;
+  }
+  .image-container {
     background-image: url('./images/image-product-mobile.jpg');
-    border-radius: 10px 10px 0 0;
-  }
-  .content {
-    height: 300px;
-  }
-  button {
-    padding: 10px 60px;
+    border-radius: 15px 15px 0 0;
   }
 }
