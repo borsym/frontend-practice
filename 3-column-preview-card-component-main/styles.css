@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white-paragraphs: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray-bg-head-button: hsl(0, 0%, 95%);
+  --deca: 'Lexend Deca', sans-serif;
+  --shoulders: 'Big Shoulders Display', cursive;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--very-light-gray-bg-head-button);
+  font-family: var(--deca);
+  font-size: 15px;
+  color: var(--very-light-gray-bg-head-button);
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container h1 {
+  font-family: var(--shoulders);
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.container p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: var(--transparent-white-paragraphs);
+  line-height: 1.5rem;
+}
+
+.card {
+  height: 30rem;
+  width: 22rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3rem;
+}
+
+.sedans {
+  background-color: var(--bright-orange);
+}
+
+.sedans button {
+  color: var(--bright-orange);
+}
+
+.suvs {
+  background-color: var(--dark-cyan);
+}
+
+.suvs button {
+  color: var(--dark-cyan);
+}
+
+.luxury {
+  background-color: var(--very-dark-cyan);
+}
+
+.luxury button {
+  color: var(--very-dark-cyan);
+}
+
+button {
+  color: inherit;
+  background-color: var(--very-light-gray-bg-head-button);
+  border: 0.1rem solid var(--very-light-gray-bg-head-button);
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 4rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  color: var(--very-light-gray-bg-head-button);
+  background-color: transparent;
+}
+
+img {
+  margin-bottom: 1.5rem;
+}
+
+@media (width <= 700px) {
+  .card {
+    width: 19rem;
+    margin: 0 4rem;
+  }
+  .container {
+    flex-direction: column;
+  }
+}
