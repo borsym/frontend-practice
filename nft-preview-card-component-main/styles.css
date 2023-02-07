@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --very-dark-blue-main-bg: hsl(217, 54%, 11%);
+  --very-dark-blue-card-bg: hsl(216, 50%, 16%);
+  --very-dark-blue-line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+  --outfit: 'Outfit', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--very-dark-blue-main-bg);
+  font-size: 18px;
+  font-family: var(--outfit);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: var(--very-dark-blue-card-bg);
+  border-radius: 1.5rem;
+  margin: 1rem;
+  max-width: 20rem;
+}
+
+.equilibrium {
+  padding: 1rem;
+  border-radius: 1.25rem;
+  width: 100%;
+}
+
+section {
+  margin: 1rem;
+}
+
+section h1 {
+  color: var(--white);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0.5rem;
+}
+
+section > p {
+  color: var(--soft-blue);
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0.5rem;
+  margin-top: 1rem;
+}
+
+.details {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.eth {
+  color: var(--cyan);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.time {
+  color: var(--soft-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.line {
+  border: 1px solid var(--very-dark-blue-line);
+  margin: 0.5rem 0.5rem;
+}
+
+.creator {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--soft-blue);
+}
+
+.creator .avatar {
+  border: 3px solid var(--white);
+  border-radius: 50%;
+  height: 2.5rem;
+  width: 2.5rem;
+  margin-right: 0.5rem;
+}
+.creator .name {
+  color: var(--white);
+}
