@@ -1,4 +1,3 @@
-// get all the circles within the rating class
 const ratings = document.querySelectorAll('.rating .circle');
 const success = document.querySelector('.success');
 const card = document.querySelector('.card');
@@ -11,7 +10,6 @@ function handleClick(event) {
 
 function handleSubmit(event) {
   const rating = document.querySelector('.rating .circle.active');
-  // rating.innerHTML
   if (!rating) {
     return;
   }
